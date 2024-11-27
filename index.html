@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <title>Mi Portafolio | Alura Latam</title>
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="cabecera__contenedor">
+            <div class="cabecera__logo-titulo">
+                <img class="cabecera__logo" src="assets/vector.png" alt="Logo de Alura Latam">
+                <h1 class="cabecera__titulo">LVC</h1>
+            </div>
+            <nav class="navegacion">
+                <button class="navegacion__toggle" aria-label="Abrir menú">
+                    <span class="navegacion__icon"></span>
+                </button>
+                <ul class="navegacion__lista">
+                    <li class="navegacion__elemento"><a href="#sobre-mi">Sobre mí</a></li>
+                    <li class="navegacion__elemento"><a href="#habilidades">Habilidades</a></li>
+                    <li class="navegacion__elemento"><a href="#aficiones">Aficiones</a></li>
+                    <li class="navegacion__elemento"><a href="#formacion">Formación</a></li>
+                    <li class="navegacion__elemento"><a href="#proyectos">Proyectos</a></li>
+                    <li class="navegacion__elemento"><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="presentacion">
+            
+            <div class="presentacion__contenedor">
+                <img class="presentacion__foto" src="assets/profile.png" alt="Foto de perfil">
+                <div class="presentacion__texto">
+                    <h2 class="presentacion__titulo">Hola, mi nombre es Leandro Cruz</h2>
+                    <p class="presentacion__subtitulo">Soy un apasionado de la programación web, con un fuerte enfoque en el desarrollo frontend. Con una sólida base en programación y un gran interés en el diseño UX/UI, busco crear experiencias de usuario intuitivas y atractivas.</p>
+                    <ul class="redes">
+                        <li class="redes__item"><a href="#" class="redes__link">GITHUB <img src="assets/arrow.png" alt="Flecha"></a></li>
+                        <li class="redes__item"><a href="#" class="redes__link">LINKEDIN <img src="assets/arrow.png" alt="Flecha"></a></li>
+                        <li class="redes__item"><a href="#" class="redes__link">INSTAGRAM <img src="assets/arrow.png" alt="Flecha"></a></li>
+                        <li class="redes__item"><a href="#" class="redes__link">DESCARGAR CV <img src="assets/arrow.png" alt="Flecha"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre-mi" id="sobre-mi">
+            <h2 class="seccion__titulo">Sobre mí</h2>
+            <div class="sobre-mi__contenido">
+                <p class="sobre-mi__texto">Soy una desarrolladora web apasionada por crear experiencias digitales únicas y funcionales. Con una sólida formación en tecnologías front-end y back-end, me especializo en construir sitios web responsivos y aplicaciones web dinámicas.</p>
+                <p class="sobre-mi__texto">Mi enfoque se centra en combinar diseño atractivo con funcionalidad robusta, siempre buscando optimizar la experiencia del usuario. Estoy constantemente actualizándome con las últimas tendencias y tecnologías en el mundo del desarrollo web.</p>
+                <img class="sobre-mi__firma" src="assets/signature.png" alt="Firma">
+            </div>
+        </section>
+
+        <section class="habilidades" id="habilidades">
+            <h2 class="seccion__titulo">Habilidades</h2>
+            <ul class="habilidades__lista">
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icono" src="assets/htlm.png" alt="HTML">
+                    <p class="habilidades__nombre">HTML 5</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icono" src="assets/js_icon.png" alt="JavaScript">
+                    <p class="habilidades__nombre">JavaScript</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icono" src="assets/php_icon.png" alt="PHP">
+                    <p class="habilidades__nombre">PHP</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icono" src="assets/nodejs_icon.png" alt="Node.js">
+                    <p class="habilidades__nombre">Node.js</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icono" src="assets/react_icon.png" alt="React">
+                    <p class="habilidades__nombre">React</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icono" src="assets/css_icon.png" alt="CSS">
+                    <p class="habilidades__nombre">CSS</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="aficiones" id="aficiones">
+            <h2 class="seccion__titulo">Aficiones</h2>
+            <ul class="aficiones__lista">
+                <li class="aficiones__elemento">
+                    <img class="aficiones__icono" src="assets/skate_icon.png" alt="Patinaje">
+                    <p class="aficiones__nombre">Patinaje</p>
+                </li>
+                <li class="aficiones__elemento">
+                    <img class="aficiones__icono" src="assets/guitar_icon.png" alt="Tocar bajo">
+                    <p class="aficiones__nombre">Tocar bajo</p>
+                </li>
+                <li class="aficiones__elemento">
+                    <img class="aficiones__icono" src="assets/headphones_icon.png" alt="Oír música">
+                    <p class="aficiones__nombre">Oír música</p>
+                </li>
+                <li class="aficiones__elemento">
+                    <img class="aficiones__icono" src="assets/tv_icon.png" alt="Ver series">
+                    <p class="aficiones__nombre">Ver series</p>
+                </li>
+                <li class="aficiones__elemento">
+                    <img class="aficiones__icono" src="assets/forkspoon_icon.png" alt="Cocinar">
+                    <p class="aficiones__nombre">Cocinar</p>
+                </li>
+                <li class="aficiones__elemento">
+                    <img class="aficiones__icono" src="assets/camera_icon.png" alt="Tomar fotos">
+                    <p class="aficiones__nombre">Tomar fotos</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="formacion" id="formacion">
+            <h2 class="seccion__titulo">Formación académica</h2>
+            <ul class="formacion__lista">
+                <li class="formacion__elemento">
+                    <img class="formacion__icono" src="assets/ufpr_logo.png" alt="UFPR">
+                    <div class="formacion__info">
+                        <h3 class="formacion__nombre">Análisis de datos</h3>
+                        <p class="formacion__detalle">2018 - UFPR</p>
+                    </div>
+                </li>
+                <li class="formacion__elemento">
+                    <img class="formacion__icono" src="assets/alura_logo.png" alt="Alura">
+                    <div class="formacion__info">
+                        <h3 class="formacion__nombre">Formación en UX Design</h3>
+                        <p class="formacion__detalle">2019 - Alura</p>
+                    </div>
+                </li>
+                <li class="formacion__elemento">
+                    <img class="formacion__icono" src="assets/ufrj_logo.png" alt="UFRJ">
+                    <div class="formacion__info">
+                        <h3 class="formacion__nombre">Posgrado en diseño</h3>
+                        <p class="formacion__detalle">En curso - UFRJ</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="proyectos" id="proyectos">
+            <h2 class="seccion__titulo">Experiencia Profesional</h2>
+            <div class="proyectos__lista">
+                <div class="proyectos__contenedor">
+                    <h3 class="proyectos__nombre">Desarrollo Web Freelance</h3>
+                    <p class="proyectos__descripcion">Como desarrolladora web freelance, he creado sitios web responsivos y aplicaciones web para diversos clientes, utilizando tecnologías como HTML5, CSS3, JavaScript y frameworks modernos como React.</p>
+                </div>
+                <div class="proyectos__contenedor">
+                    <h3 class="proyectos__nombre">Proyecto E-commerce</h3>
+                    <p class="proyectos__descripcion">Participé en el desarrollo de una plataforma de comercio electrónico, implementando funcionalidades de carrito de compras, sistema de pagos y gestión de inventario utilizando Node.js y MongoDB.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2 class="seccion__titulo">Contacto</h2>
+            <form class="contacto__formulario" id="contactForm">
+                <div class="campo-grupo">
+                    <input class="contacto__campo" type="text" id="nombre" name="nombre" >
+                    <label for="nombre" class="contacto__label">Nombre</label>
+                </div>
+                <div class="campo-grupo">
+                    <input class="contacto__campo" type="email" id="email" name="email" >
+                    <label for="email" class="contacto__label">Correo Electrónico</label>
+                </div>
+                <div class="campo-grupo">
+                    <textarea class="contacto__campo contacto__campo--textarea" id="mensaje" name="mensaje" ></textarea>
+                    <label for="mensaje" class="contacto__label">Mensaje</label>
+                </div>
+                <button class="contacto__boton" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <button id="scrollToTop" class="floating-button scroll-to-top" aria-label="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="floating-button__icon">
+            <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z" />
+        </svg>
+    </button>
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Cambiar modo oscuro">
+        <i id="icon-sun" class="fas fa-sun fa-2x dark-mode-toggle__icon" style="display: none;"></i>
+        <i id="icon-moon" class="fas fa-moon fa-2x dark-mode-toggle__icon"></i>
+    </button>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Portfolio Desarrollado por @Leandro Cruz - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
