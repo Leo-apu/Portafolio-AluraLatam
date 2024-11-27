@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Intersection Observer para animaciones de entrada
     const sections = document.querySelectorAll('section');
     const observerOptions = { threshold: 0.1 };
 
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => observer.observe(section));
 
-    // 2. Validación del formulario
     const form = document.getElementById('contactForm');
     const nombre = document.getElementById('nombre');
     const email = document.getElementById('email');
@@ -80,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    // 3. Navegación suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
@@ -88,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Manejo del menú de navegación
     const navToggle = document.querySelector('.navegacion__toggle');
     const navMenu = document.querySelector('.navegacion');
     const navList = document.querySelector('.navegacion__lista');
@@ -108,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 5. Ajuste del padding para el header
     const header = document.querySelector('.cabecera');
     const main = document.querySelector('main');
 
@@ -120,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', adjustMainPadding);
     window.addEventListener('resize', adjustMainPadding);
 
-    // 6. Dark mode toggle
     const darkModeToggle = document.getElementById('darkModeToggle');
     const iconSun = document.getElementById('icon-sun');
     const iconMoon = document.getElementById('icon-moon');
@@ -147,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setDarkMode(!document.body.classList.contains('dark-mode'));
     });
 
-    // 7. Botón de "scroll to top"
     const scrollToTopButton = document.getElementById('scrollToTop');
 
     window.addEventListener('scroll', () => {
@@ -162,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 8. Transparencia del header
     function handleNavTransparency() {
         if (window.scrollY > 100) {
             header.classList.add('cabecera--transparent');

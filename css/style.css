@@ -1,21 +1,31 @@
 :root {
-    --color-primario: #4A235A;
-    --color-secundario: #6C3483;
-    --color-acento: #D7BDE2;
-    --color-fondo: #F8F9F9;
-    --color-texto: #2E4053;
-    --color-texto-claro: #5D6D7E;
+
+    --color-fondo: hsla(259.4117647058824, 100%, 63%, 1);
+    --image: radial-gradient(circle at 15% 85%, hsla(318, 80%, 97%, 1) 19%, transparent 84%), radial-gradient(circle at 31% 1%, hsla(161.47058823529412, 99%, 84%, 1) 12%, transparent 85%), radial-gradient(circle at 88% 87%, hsla(163, 90%, 78%, 1) 3.6400864520532363%, transparent 75.20902830975928%), radial-gradient(circle at 30% 27%, hsla(314, 91%, 59%, 1) 14%, transparent 90%);
+    --back-mode: normal, normal, normal, normal, normal;
+
     --fuente-principal: 'Poppins', sans-serif;
+
+    --color-primario: #2C3E50;
+    --color-secundario: #34495E;
+    --color-acento: #5DADE2;
+    --color-texto: #2D3436;
+    --color-texto-claro: #7F8C8D;
 }
 
 /* Modo oscuro */
 .dark-mode {
-    --color-primario: #6C3483;
-    --color-secundario: #7D3C98;
-    --color-acento: #AF7AC5;
-    --color-fondo: #1B2631;
-    --color-texto: #EAECEE;
-    --color-texto-claro: #ABB2B9;
+
+    --color-fondo:  hsla(117.00000000000004, 40%, 15%, 1);
+    --image :  radial-gradient(circle at 3% 92%, hsla(161, 100%, 50%, 1) 0%, transparent 67%), radial-gradient(circle at 46% 94%, hsla(227.6470588235294, 100%, 50%, 1) 0%, transparent 81%), radial-gradient(circle at 93% 95%, hsla(230.2941176470588, 100%, 23%, 1) 0%, transparent 66%), radial-gradient(circle at 89% 8%, hsla(243.52941176470586, 100%, 9%, 1) 0%, transparent 150%);
+    --back-mode : normal, normal, normal, normal;
+    --fuente-principal: 'Poppins', sans-serif;
+
+    --color-primario: #5DADE2;
+    --color-secundario: #7FB3D5;
+    --color-acento: #3498DB;
+    --color-texto: #ECF0F1;
+    --color-texto-claro: #BDC3C7;
 }
 
 
@@ -28,6 +38,8 @@
 body {
     font-family: var(--fuente-principal);
     background-color: var(--color-fondo);
+    background-image: var(--image);
+    background-blend-mode: var(--back-mode);
     color: var(--color-texto);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -267,6 +279,11 @@ ul, li {
     width: 80px;
     height: 80px;
     margin-bottom: 1rem;
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.8));
+}
+
+.habilidades__elemento:hover .habilidades__icono, .aficiones__elemento:hover .aficiones__icono {
+    transform: scale(1.2);
 }
 
 .habilidades__nombre, .aficiones__nombre {
