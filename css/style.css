@@ -1,16 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Gruppo&display=swap');
+
 :root {
 
     --color-fondo: hsla(259.4117647058824, 100%, 63%, 1);
     --image: radial-gradient(circle at 15% 85%, hsla(318, 80%, 97%, 1) 19%, transparent 84%), radial-gradient(circle at 31% 1%, hsla(161.47058823529412, 99%, 84%, 1) 12%, transparent 85%), radial-gradient(circle at 88% 87%, hsla(163, 90%, 78%, 1) 3.6400864520532363%, transparent 75.20902830975928%), radial-gradient(circle at 30% 27%, hsla(314, 91%, 59%, 1) 14%, transparent 90%);
     --back-mode: normal, normal, normal, normal, normal;
 
-    --fuente-principal: 'Poppins', sans-serif;
+    --fuente-principal: "Saira Stencil One", sans-serif;
+    --fuente-secundaria: "Jura", sans-serif;
 
     --color-primario: #2C3E50;
     --color-secundario: #34495E;
     --color-acento: #5DADE2;
     --color-texto: #2D3436;
     --color-texto-claro: #7F8C8D;
+    --sombra : 1px 2px 4px rgb(255, 254, 254);
+    --botones-color: #b60aab;
+    --botones-color-hover: #f43a69;
+    --tamaño-presentacion: 1.8rem;
+    --tamaño-presentacion-escritorio: 2.5rem;
 }
 
 /* Modo oscuro */
@@ -19,13 +30,18 @@
     --color-fondo:  hsla(117.00000000000004, 40%, 15%, 1);
     --image :  radial-gradient(circle at 3% 92%, hsla(161, 100%, 50%, 1) 0%, transparent 67%), radial-gradient(circle at 46% 94%, hsla(227.6470588235294, 100%, 50%, 1) 0%, transparent 81%), radial-gradient(circle at 93% 95%, hsla(230.2941176470588, 100%, 23%, 1) 0%, transparent 66%), radial-gradient(circle at 89% 8%, hsla(243.52941176470586, 100%, 9%, 1) 0%, transparent 150%);
     --back-mode : normal, normal, normal, normal;
-    --fuente-principal: 'Poppins', sans-serif;
-
+    --fuente-principal: "Bungee Inline", cursive;
+    --fuente-secundaria: "Gruppo", cursive;
+    --tamaño-presentacion: 1.5rem;
+    --tamaño-presentacion-escritorio: 2rem;
     --color-primario: #5DADE2;
     --color-secundario: #7FB3D5;
-    --color-acento: #3498DB;
+    --color-acento: #135784;
     --color-texto: #ECF0F1;
     --color-texto-claro: #BDC3C7;
+    --botones-color: #ef4c16;
+    --botones-color-hover: #b7c405;
+    --sombra : 1px 2px 4px rgba(0,0,0,1);
 }
 
 
@@ -36,13 +52,13 @@
 }
 
 body {
-    font-family: var(--fuente-principal);
     background-color: var(--color-fondo);
     background-image: var(--image);
     background-blend-mode: var(--back-mode);
     color: var(--color-texto);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    scrollbar-color: var(--color-secundario) var(--color-fondo);
 }
 
 .cabecera {
@@ -80,9 +96,8 @@ body {
 }
 
 .cabecera__logo {
-    width: 40px;
+    width: 60px;
     height: auto;
-    margin-right: 1rem;
 }
 
 .cabecera__titulo {
@@ -100,6 +115,8 @@ body {
     display: flex;
     gap: 1.5rem;
     list-style: none;
+    font-family: var(--fuente-principal);
+    font-size: 0.8rem;
 }
 
 .navegacion__elemento a {
@@ -175,6 +192,8 @@ main {
     color: var(--color-primario);
     margin: 2rem 0;
     text-align: center;
+    font-family: var(--fuente-principal);
+    text-shadow: var(--sombra)
 }
 
 .presentacion__contenedor {
@@ -188,6 +207,7 @@ main {
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    box-shadow: 0 4px 50px rgb(6, 174, 174);
     object-fit: cover;
     border: 5px solid var(--color-acento);
 }
@@ -197,57 +217,134 @@ main {
     margin-left: 2rem;
 }
 
+
 .presentacion__titulo {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-primario);
+    font-family: var(--fuente-principal);
+    font-size: var(--tamaño-presentacion-escritorio); /* Tamaño grande para destacar el título */
+    font-weight: bold; /* Resaltar el texto */
+    color: var(--color-primario); /* Color oscuro pero no negro puro */
+    text-align: center; /* Centrar el texto */
+    display: flex; /* Hacer el contenedor flexible */
+    align-items: center; /* Centrar verticalmente el contenido */
+    justify-content: center; /* Centrar horizontalmente el contenido */
+    gap: 15px; /* Espacio entre el texto y el GIF */
+    margin-bottom: 20px; /* Espaciado inferior */
+    padding: 10px 20px; /* Espaciado interno */
+    background: linear-gradient(to right, #007bff, #00d4ff); /* Fondo degradado */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    color: white; /* Texto en blanco */
 }
+
+/* Aumentar el tamaño del GIF para que se vea más acorde */
+.giphy-embed {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Hacer el GIF circular */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el GIF */
+    transition: transform 0.3s ease; /* Animación al pasar el cursor */
+}
+
+/* Animación hover para el GIF */
+.giphy-embed:hover {
+    transform: scale(1.2); /* Ampliar ligeramente el tamaño al pasar el cursor */
+}
+
 
 .presentacion__subtitulo {
     font-size: 1.2rem;
     color: var(--color-texto-claro);
     margin-bottom: 1.5rem;
+    font-family: var(--fuente-secundaria);
 }
 
+/* Lista de redes */
 .redes {
+    list-style: none;
+    padding: 0;
     display: flex;
-    gap: 2rem;
+    gap: 15px;
+    justify-content: center;
 }
 
+.redes__item {
+    margin: 0;
+}
+
+/* Estilo de los enlaces */
 .redes__link {
     display: flex;
     align-items: center;
-    color: var(--color-primario);
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    background-color: #007bff;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Hover animado */
 .redes__link:hover {
-    color: var(--color-secundario);
+    background-color: #0056b3;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
 }
 
-.redes__link img {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
+/* Flecha animada */
+.redes__link::after {
+    content: '→';
+    font-size: 1.2rem;
+    position: absolute;
+    right: 20px;
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
-.redes__link:hover img {
-    transform: translateX(5px);
+.redes__link:hover::after {
+    opacity: 1;
+    right: 10px;
 }
 
-.sobre-mi {
+.sobre-mi__contenido {
     background-color: var(--color-acento);
     padding: 3rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     margin-bottom: 4rem;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: var(--fuente-secundaria);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
 }
+
+.sobre-mi__seccion_texto {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.sobre-mi__seccion_imagen {
+    flex: 1;
+}
+
+.styled-gif {
+    border-radius: 15px; 
+    box-shadow: -10px 10px 8px rgba(0, 0, 0, 1); 
+    width: 400px; 
+    display: block; 
+    margin: 20px auto; 
+  }
 
 .sobre-mi__texto {
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .sobre-mi__firma {
@@ -288,6 +385,7 @@ ul, li {
 
 .habilidades__nombre, .aficiones__nombre {
     font-weight: 500;
+    font-family: var(--fuente-principal);
 }
 
 .formacion__lista {
@@ -309,19 +407,24 @@ ul, li {
 }
 
 .formacion__icono {
-    width: 100px;
+    width: 200px;
     height: auto;
     margin-bottom: 1rem;
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.8));
 }
 
 .formacion__nombre {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: var(--color-primario);
+    font-family: var(--fuente-principal);
+    text-shadow: var(--sombra);
 }
 
 .formacion__detalle {
     color: var(--color-texto-claro);
+    font-family: var(--fuente-secundaria);
+    text-shadow: var(--sombra);
 }
 
 .proyectos__lista {
@@ -342,10 +445,14 @@ ul, li {
     font-size: 1.3rem;
     margin-bottom: 1rem;
     color: var(--color-primario);
+    font-family: var(--fuente-principal);
+    text-shadow: var(--sombra);
 }
 
 .proyectos__descripcion {
     color: var(--color-texto-claro);
+    font-family: var(--fuente-secundaria);
+    text-shadow: var(--sombra);
 }
 
 .contacto__formulario {
@@ -425,7 +532,7 @@ ul, li {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--color-primario);
+    background-color: var(--botones-color);
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -441,7 +548,7 @@ ul, li {
 }
 
 .dark-mode-toggle:hover {
-    background-color: var(--color-secundario);
+    background-color: var(--botones-color-hover);
     transform: scale(1.1);
 }
 
@@ -509,11 +616,38 @@ ul, li {
         width: 98%;
     }
 
+    .presentacion__titulo {
+        font-size: var(--tamaño-presentacion); /* Reducir el tamaño del texto */
+        flex-direction: column; /* Colocar el GIF encima del texto */
+        gap: 10px;
+    }
+
+    .giphy-embed {
+        width: 50px;
+        height: 50px;
+    }
+
     .redes {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        justify-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .styled-gif {
+        width: 280px;
+    }
+
+    .sobre-mi__texto {
+        margin-bottom: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .sobre-mi__contenido {
+        padding: 1.2rem;
+    }
+
+    .sobre-mi__seccion_texto {
+        margin-right: 0;
+        text-align: justify;
     }
 }
 
@@ -529,7 +663,7 @@ ul, li {
 .floating-button {
     position: fixed;
     bottom: 20px;
-    background-color: var(--color-primario);
+    background-color: var(--botones-color);
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -545,7 +679,7 @@ ul, li {
 }
 
 .floating-button:hover {
-    background-color: var(--color-secundario);
+    background-color: var(--botones-color-hover);
     transform: scale(1.1);
 }
 
