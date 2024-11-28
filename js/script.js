@@ -21,7 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         if (validateForm()) {
-            alert('Formulario enviado con éxito!');
+            Swal.fire({
+                title: "Formulario Enviado Correctamente",
+                text: "Gracias por contactarnos, te responderemos a la brevedad.",
+                icon: "success",
+                backdrop: true,
+                color: "#ffffff",
+                background: "#5DADE2",
+              });
             form.reset();
         }
     });

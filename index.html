@@ -47,10 +47,10 @@
                     <h2 class="presentacion__titulo">Hola <img class="giphy-embed" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWYyZXc5N2cwZnVtNDN3Z24wNmkzaDN3Y3RkcDk5b2ppZjRxaWNwcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ykZS4KGnpdlY2f7XHg/giphy.webp">, mi nombre es Leandro Cruz</h2>
                     <p class="presentacion__subtitulo">Soy un apasionado de la programación web, con un fuerte enfoque en el desarrollo frontend. Con una sólida base en programación y un gran interés en el diseño UX/UI, busco crear experiencias de usuario intuitivas y atractivas.</p>
                     <ul class="redes">
-                        <li class="redes__item"><a href="#" class="redes__link">GITHUB</a></li>
-                        <li class="redes__item"><a href="#" class="redes__link">LINKEDIN</a></li>
+                        <li class="redes__item"><a href="https://github.com/Leo-apu" target="_blank" class="redes__link">GITHUB</a></li>
+                        <li class="redes__item"><a href="https://www.linkedin.com/in/leandro-v-cruz/" class="redes__link">LINKEDIN</a></li>
                         <li class="redes__item"><a href="#" class="redes__link">INSTAGRAM</a></li>
-                        <li class="redes__item"><a href="#" class="redes__link">DESCARGAR CV</a></li>
+                        <li class="redes__item"><a href="https://drive.google.com/drive/folders/1fi4kRU7shxgKZqZFzSg9EmHHwkYem3oy?usp=drive_link" target="_blank" class="redes__link">DESCARGAR CV</a></li>
                     </ul>
                 </div>
             </div>
@@ -219,12 +219,40 @@
             <h2 class="seccion__titulo">Experiencia Profesional</h2>
             <div class="proyectos__lista">
                 <div class="proyectos__contenedor">
-                    <h3 class="proyectos__nombre">Desarrollo Web Freelance</h3>
-                    <p class="proyectos__descripcion">Como desarrolladora web freelance, he creado sitios web responsivos y aplicaciones web para diversos clientes, utilizando tecnologías como HTML5, CSS3, JavaScript y frameworks modernos como React.</p>
+                    <div class="proyecto__imagen">
+                        <img src="assets/aluraflix.png" alt= "AluraFlix">
+                    </div>
+                    <div class="proyecto__texto">
+                        <h3 class="proyectos__nombre">ALURA FLIX</h3>
+                        <p class="proyectos__descripcion">Como desarrolladora web freelance, he creado sitios web responsivos y aplicaciones web para diversos clientes, utilizando tecnologías como HTML5, CSS3, JavaScript y frameworks modernos como React.</p>
+                    </div>
                 </div>
                 <div class="proyectos__contenedor">
-                    <h3 class="proyectos__nombre">Proyecto E-commerce</h3>
-                    <p class="proyectos__descripcion">Participé en el desarrollo de una plataforma de comercio electrónico, implementando funcionalidades de carrito de compras, sistema de pagos y gestión de inventario utilizando Node.js y MongoDB.</p>
+                    <div class="proyecto__imagen">
+                        <img src="assets/mentalista.png" alt= "Mentalista">
+                    </div>
+                    <div class="proyecto__texto">
+                        <h3 class="proyectos__nombre">MENTALISTA</h3>
+                        <p class="proyectos__descripcion">Como desarrolladora web freelance, he creado sitios web responsivos y aplicaciones web para diversos clientes, utilizando tecnologías como HTML5, CSS3, JavaScript y frameworks modernos como React.</p>
+                    </div>
+                </div>
+                <div class="proyectos__contenedor">
+                    <div class="proyecto__imagen">
+                        <img src="assets/enctypter-alura.png" alt= "Encriptador">
+                    </div>
+                    <div class="proyecto__texto">
+                        <h3 class="proyectos__nombre">ENCRYPTADOR</h3>
+                        <p class="proyectos__descripcion">Como desarrolladora web freelance, he creado sitios web responsivos y aplicaciones web para diversos clientes, utilizando tecnologías como HTML5, CSS3, JavaScript y frameworks modernos como React.</p>
+                    </div>
+                </div>
+                <div class="proyectos__contenedor">
+                    <div class="proyecto__imagen">
+                        <img src="assets/conversor.png" alt= "Conversor de moneda y temperatura">
+                    </div>
+                    <div class="proyecto__texto">
+                        <h3 class="proyectos__nombre">CONVERSOR DE MONEDA Y TEMPERATURA</h3>
+                        <p class="proyectos__descripcion">Como desarrolladora web freelance, he creado sitios web responsivos y aplicaciones web para diversos clientes, utilizando tecnologías como HTML5, CSS3, JavaScript y frameworks modernos como React.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -232,21 +260,28 @@
         <section class="contacto" id="contacto">
             <h2 class="seccion__titulo">Contacto</h2>
             <form class="contacto__formulario" id="contactForm">
+                <div class="form-title"><span>Enviame tu consulta</span></div>
+             <div class="title-2"><span>LVC</span></div>
+                <section class="bg-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </section>
                 <div class="campo-grupo">
-                    <input class="contacto__campo" type="text" id="nombre" name="nombre" >
-                    <label for="nombre" class="contacto__label">Nombre</label>
+                    <input class="contacto__campo" type="text" id="nombre" name="nombre" placeholder="Ingrese Nombre">
                 </div>
                 <div class="campo-grupo">
-                    <input class="contacto__campo" type="email" id="email" name="email" >
-                    <label for="email" class="contacto__label">Correo Electrónico</label>
+                    <input class="contacto__campo" type="email" id="email" name="email" placeholder="Ingrese Email">
                 </div>
                 <div class="campo-grupo">
-                    <textarea class="contacto__campo contacto__campo--textarea" id="mensaje" name="mensaje" ></textarea>
-                    <label for="mensaje" class="contacto__label">Mensaje</label>
+                    <textarea class="contacto__campo contacto__campo--textarea" id="mensaje" name="mensaje" placeholder="Ingrese Mensaje"></textarea>
                 </div>
-                <button class="contacto__boton" type="submit">Enviar</button>
+                <button type="submit" class="contacto__boton">
+                    <span class="sign-text">Enviar</span>
+                  </button>
             </form>
-        </section>
+        </section>        
     </main>
     
     <button id="scrollToTop" class="floating-button scroll-to-top" aria-label="Volver arriba">
@@ -264,5 +299,6 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
